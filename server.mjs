@@ -10,29 +10,36 @@ const mockSurveyData = { "data":
             "overall_satisfaction": "2",
             "company_mission": "3", 
             "team_name": "platform",
-            "recomend_to_friend": "yes",
+            "recommend_to_friend": "yes",
             "comments_for_leadership": "Less meetings"
         },
         {
             "employee_id": "2", 
-            "overall_satisfaction": "5",
+            "overall_satisfaction": "2",
             "company_mission": "7", 
             "team_name": "HR",
-            "recomend_to_friend": "maybe",
+            "recommend_to_friend": "maybe",
             "comments_for_leadership": "Less meetings"
         },
         {   "employee_id": "3", 
+            "overall_satisfaction": "6",
+            "company_mission": "3", 
+            "team_name": "PLATFORM",
+            "recommend_to_friend": "no",
+            "comments_for_leadership": "null"
+        },
+        {   "employee_id": "4", 
             "overall_satisfaction": "2",
             "company_mission": "3", 
             "team_name": "PLATFORM",
-            "recomend_to_friend": "no",
+            "recommend_to_friend": "no",
             "comments_for_leadership": "null"
         }
     ]
 }
 
 app.get('/survey-data', (req, res) => {
-  res.json(mockSurveyData);
+    res.json(mockSurveyData);
 });
 
 app.listen(port, () => {
